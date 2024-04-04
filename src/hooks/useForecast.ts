@@ -1,14 +1,14 @@
-import { useState, useEffect, ChangeEvent } from 'react'
+import { useState, useEffect, ChangeEvent } from "react";
 
-import { optionType, forecastType } from './../types/index'
+import { optionType, forecastType } from "./../types/index";
 
-const BASE_URL = 'http://api.openweathermap.org'
+const BASE_URL = "http://api.openweathermap.org";
 
 const useForecast = () => {
-  const [city, setCity] = useState<optionType | null>(null)
-  const [term, setTerm] = useState<string>('')
-  const [options, setOptions] = useState<[]>([])
-  const [forecast, setForecast] = useState<forecastType | null>(null)
+  const [city, setCity] = useState<optionType | null>(null);
+  const [term, setTerm] = useState<string>("");
+  const [options, setOptions] = useState<[]>([]);
+  const [forecast, setForecast] = useState<forecastType | null>(null);
 
   const getSearchOptions = async (term: string) => {
     fetch(
@@ -18,14 +18,14 @@ const useForecast = () => {
     )
       .then((res) => res.json())
       .then((data) => setOptions(data))
-      .catch((e) => console.log({ e }))
-  }
+      .catch((e) => console.log({ e }));
+  };
 
   const onSubmit = () => {
-    if (!city) return
+    if (!city) return;
 
-    getForecast(city)
-  }
+    getForecast(city);
+  };
 
   const getForecast = (data: optionType) => {
     fetch(
@@ -36,32 +36,32 @@ const useForecast = () => {
         const forecastData = {
           ...data.city,
           list: data.list.slice(0, 16),
-        }
+        };
 
-        setForecast(forecastData)
+        setForecast(forecastData);
       })
-      .catch((e) => console.log({ e }))
-  }
+      .catch((e) => console.log({ e }));
+  };
 
   const onOptionSelect = (option: optionType) => {
-    setCity(option)
-  }
+    setCity(option);
+  };
 
   const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.trim()
-    setTerm(e.target.value)
+    const value = e.target.value.trim();
+    setTerm(e.target.value);
 
-    if (value !== '') {
-      getSearchOptions(value)
+    if (value !== "") {
+      getSearchOptions(value);
     }
-  }
+  };
 
   useEffect(() => {
     if (city) {
-      setTerm(city.name)
-      setOptions([])
+      setTerm(city.name);
+      setOptions([]);
     }
-  }, [city])
+  }, [city]);
 
   return {
     forecast,
@@ -70,7 +70,7 @@ const useForecast = () => {
     onOptionSelect,
     onSubmit,
     onInputChange,
-  }
-}
+  };
+};
 
-export default useForecast
+export default useForecast;
