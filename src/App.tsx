@@ -5,12 +5,12 @@ import useForecast from "./hooks/useForecast";
 
 const App = (): JSX.Element => {
   const imageUrl =
-    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKAv55B4hJsjTyiWSy7xXTxwsOFI_msfcwMR0wXskw96Uraa3wK3hdaUhJMmv5iWebSIGK-Z0UPiW6nNZnqieJlqCAXOURiufT2AfnEjoM4Yzl-TtpFNZV409VqKCr0R_xG7Rv-P9eG10/s1600/monocloudsexample.jpg";
+    "https://64.media.tumblr.com/5b65b59a580630730c8bd4b5015ca19f/6d2d1ab3c1fb4c2b-f8/s1280x1920/fd39f697eade06189b25e4fec2a7648e5774746c.jpg";
   const { forecast, options, term, onOptionSelect, onSubmit, onInputChange } =
     useForecast();
 
   return (
-    <main className="flex justify-center items-center bg-[url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKAv55B4hJsjTyiWSy7xXTxwsOFI_msfcwMR0wXskw96Uraa3wK3hdaUhJMmv5iWebSIGK-Z0UPiW6nNZnqieJlqCAXOURiufT2AfnEjoM4Yzl-TtpFNZV409VqKCr0R_xG7Rv-P9eG10/s1600/monocloudsexample.jpg')] bg-cover bg-center h-[100vh] w-full">
+    <main className="flex justify-center items-center bg-[url('https://64.media.tumblr.com/5b65b59a580630730c8bd4b5015ca19f/6d2d1ab3c1fb4c2b-f8/s1280x1920/fd39f697eade06189b25e4fec2a7648e5774746c.jpg')] bg-cover bg-center h-[100vh] w-full">
       {forecast ? (
         <Forecast data={forecast} />
       ) : (

@@ -21,7 +21,7 @@ const Forecast = ({ data }: Props) => {
   const today = data.list[0];
 
   return (
-    <div className="w-full md:max-w-[500px] py-4 md:py-4 h-full lg:h-auto bg-white bg-opacity-20 backdrop-blur-ls rounded drop-shadow-lg">
+    <div className="w-full md:max-w-[500px] py-4 md:py-4 h-full lg:h-auto bg-white bg-opacity-70 backdrop-blur-ls rounded drop-shadow-lg">
       <a href="/" className="text-3xl mt-5 ml-5 hover:text-blue-200">
         ←
       </a>
