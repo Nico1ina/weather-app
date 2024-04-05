@@ -27,7 +27,7 @@ const Search = ({
       <input
         type="text"
         value={term}
-        className="px-2 py-1 rounded-l-md border-2 border-white"
+        className="px-2 py-1 rounded-l-md border-2 border-white focus:outline-none focus:ring focus:ring-zinc-300"
         onChange={onInputChange}
       />
 
