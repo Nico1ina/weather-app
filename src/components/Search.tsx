@@ -20,14 +20,14 @@ const Search = ({
   onOptionSelect,
   onSubmit,
 }: Props) => (
-  <section className="w-full md:max-w-[500px] p-4 flex flex-col text-center items-center justify-center md:px-10 lg:p-24 h-full lg:h-[500px] bg-white bg-opacity-80 backdrop-blur-ls rounded drop-shadow-lg text-zinc-700">
+  <section className="w-full md:max-w-[500px] p-4 flex flex-col text-center items-center justify-center md:px-10 lg:p-24 h-full lg:h-[500px] text-zinc-700">
     <Header />
 
     <div className="relative flex mt-10 md:mt-4">
       <input
         type="text"
         value={term}
-        className="px-2 py-1 rounded-l-md border-2 border-white focus:outline-none focus:ring focus:ring-zinc-300"
+        className="px-2 py-1 rounded-l-md border-2 border-white focus:outline-none focus:ring focus:ring-zinc-00"
         onChange={onInputChange}
       />
 
@@ -41,7 +41,8 @@ const Search = ({
       </button>
     </div>
     <p className="text-xs mt-20">
-      Weather kindly brought to you by{" "}
+      Weather kindly brought to you by
+      <br />
       <span className="font-bold">Nicolina Larsson </span>☺
     </p>
   </section>

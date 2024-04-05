@@ -21,7 +21,7 @@ const Forecast = ({ data }: Props) => {
   const today = data.list[0];
 
   return (
-    <div className="w-full md:max-w-[500px] py-4 md:py-4 h-full lg:h-auto bg-white bg-opacity-80 backdrop-blur-ls rounded drop-shadow-lg">
+    <div className="w-full md:max-w-[500px] py-4 md:py-4 h-full lg:h-auto">
       <a href="/" className="text-3xl mt-5 ml-5 hover:text-blue-200">
         ←
       </a>
@@ -54,7 +54,7 @@ const Forecast = ({ data }: Props) => {
                 </p>
                 <img
                   alt={`weather-icon-${item.weather[0].description}`}
-                  src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
+                  src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
                 />
                 <p className="text-sm font-bold">
                   <Degree temp={Math.round(item.main.temp)} />
@@ -64,11 +64,11 @@ const Forecast = ({ data }: Props) => {
           </section>
 
           <section className="flex flex-wrap justify-between text-zinc-700">
-            <div className="w-[140px] text-xs font-bold flex flex-col items-center bg-white/20 backdrop-blur-ls rounded drop-shadow-lg py-4 mb-5">
+            <div className="w-[140px] text-xs font-bold flex flex-col items-center py-4 mb-5">
               <Sunrise />{" "}
               <span className="mt-2">{getSunTime(data.sunrise)}</span>
             </div>
-            <div className="w-[140px] text-xs font-bold flex flex-col items-center bg-white/20 backdrop-blur-ls rounded drop-shadow-lg py-4 mb-5">
+            <div className="w-[140px] text-xs font-bold flex flex-col items-center  drop-shadow-lg py-4 mb-5">
               <Sunset /> <span className="mt-2">{getSunTime(data.sunset)}</span>
             </div>
 
