@@ -26,7 +26,9 @@ const Navbar = () => {
         {navItems.map((item) => (
           <li
             key={item.id}
-            className="p-4 m-2 cursor-pointer duration-300 hover:underline"
+            className={`p-4 m-2 cursor-pointer duration-300 hover:underline ${
+              item.text === "About" ? "hidden md:block" : ""
+            }`}
           >
             <a href={item.href}>{item.text}</a>
           </li>
