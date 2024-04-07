@@ -10,7 +10,7 @@ const Suggestions = ({ options, onSelect }: componentProps): JSX.Element => (
     {options.map((option: optionType, index: number) => (
       <li key={option.name + "-" + index}>
         <button
-          className="text-left text-sm w-full hover:bg-zinc-700 hover:text-white px-2 py-1 cursor-pointer"
+          className="text-left text-sm font-thin w-full hover:bg-zinc-400 hover:text-white px-2 py-1 cursor-pointer"
           onClick={() => onSelect(option)}
         >
           {option.name}, {option.country}

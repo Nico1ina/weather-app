@@ -5,6 +5,6 @@ const Degree = ({ temp }: { temp: number }): JSX.Element => (
       <sup>o</sup>
     </span>
   </>
-)
+);
 
-export default Degree
+export default Degree;

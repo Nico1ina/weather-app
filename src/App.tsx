@@ -1,7 +1,7 @@
 import Forecast from "./components/Forecast";
 import Search from "./components/Search";
 import Background from "./components/Background/Background";
-
+import Menu from "./components/Navbar/Navbar";
 import useForecast from "./hooks/useForecast";
 
 const App = (): JSX.Element => {
@@ -10,6 +10,7 @@ const App = (): JSX.Element => {
 
   return (
     <Background>
+      <Menu />
       <main className="flex justify-center items-center h-[100vh] w-full">
         {forecast ? (
           <Forecast data={forecast} />
