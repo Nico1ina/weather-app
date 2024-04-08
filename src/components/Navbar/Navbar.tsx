@@ -25,7 +25,7 @@ const Navbar = () => {
           <li
             key={item.id}
             className={`p-4 m-2 cursor-pointer duration-300 hover:underline ${
-              item.text === "About" ? "relative" : ""
+              item.text === "About" ? "relative hidden sm:block" : ""
             }`}
             onMouseEnter={item.text === "About" ? handleMouseEnter : undefined}
             onMouseLeave={item.text === "About" ? handleMouseLeave : undefined}
